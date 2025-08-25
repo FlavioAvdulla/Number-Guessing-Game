@@ -17,3 +17,8 @@ BUTTON_COLOR = (70, 130, 180)
 BUTTON_HOVER = (95, 160, 210)
 INPUT_BOX = (50, 80, 120)
 HIGHLIGHT = (255, 215, 0)
+
+# Fonts
+title_font = pygame.font.SysFont("arial", 48, bold=True)
+main_font = pygame.font.SysFont("arial", 32)
+message_font = pygame.font.SysFont("arial", 28)
