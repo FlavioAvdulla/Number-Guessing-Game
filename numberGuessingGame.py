@@ -63,3 +63,10 @@ class InputBox:
                 if event.unicode.isdigit() and len(self.text) < 3:
                     self.text += event.unicode
         return None
+    
+    def draw(self, surface):
+        pygame.draw.rect(surface, INPUT_BOX, self.rect, border_radius=8)
+        pygame.draw.rect(surface, TEXT_COLOR, self.rect, 2, border_radius=8)
+        
+        text_surface = main_font.render(self.text, True, TEXT_COLOR)
+        surface.blit(text_surface, (self.rect.x + 10, self.rect.y + 10))
