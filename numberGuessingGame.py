@@ -94,3 +94,6 @@ def draw_game():
 
     # Draw input box
     input_box.draw(screen)
+
+    # Draw submit button
+    submit_button.draw(screen)
