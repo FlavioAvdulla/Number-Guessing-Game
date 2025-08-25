@@ -118,3 +118,8 @@ secret_number = generate_secret_number()
 attempts = 0
 message = ""
 game_over = False
+
+# Create UI elements
+input_box = InputBox(WIDTH//2 - 70, 260, 140, 50)
+submit_button = Button(WIDTH//2 - 80, 320, 160, 50, "Submit Guess")
+play_again_button = Button(WIDTH//2 - 100, 470, 200, 50, "Play Again")
