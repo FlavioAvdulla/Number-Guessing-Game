@@ -43,3 +43,23 @@ class Button:
             return True
         self.color = BUTTON_COLOR
         return False
+    
+class InputBox:
+    def __init__(self, x, y, width, height):
+        self.rect = pygame.Rect(x, y, width, height)
+        self.text = ''
+        self.active = False
+        
+    def handle_event(self, event):
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            self.active = self.rect.collidepoint(event.pos)
+        
+        if event.type == pygame.KEYDOWN and self.active:
+            if event.key == pygame.K_RETURN:
+                return self.text
+            elif event.key == pygame.K_BACKSPACE:
+                self.text = self.text[:-1]
+            else:
+                if event.unicode.isdigit() and len(self.text) < 3:
+                    self.text += event.unicode
+        return None
