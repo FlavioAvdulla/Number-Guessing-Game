@@ -102,3 +102,7 @@ def draw_game():
     if message:
         msg = message_font.render(message, True, HIGHLIGHT)
         screen.blit(msg, (WIDTH//2 - msg.get_width()//2, 350))
+
+    # Draw attempts
+    attempts_text = main_font.render(f"Attempts: {attempts}", True, TEXT_COLOR)
+    screen.blit(attempts_text, (WIDTH//2 - attempts_text.get_width()//2, 400))
