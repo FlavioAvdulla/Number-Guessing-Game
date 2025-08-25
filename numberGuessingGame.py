@@ -97,3 +97,8 @@ def draw_game():
 
     # Draw submit button
     submit_button.draw(screen)
+
+    # Draw message
+    if message:
+        msg = message_font.render(message, True, HIGHLIGHT)
+        screen.blit(msg, (WIDTH//2 - msg.get_width()//2, 350))
