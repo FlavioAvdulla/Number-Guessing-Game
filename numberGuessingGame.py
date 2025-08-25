@@ -73,3 +73,6 @@ class InputBox:
 
 def generate_secret_number():
     return random.randint(1, 100)
+
+def draw_game():
+    screen.fill(BACKGROUND)
