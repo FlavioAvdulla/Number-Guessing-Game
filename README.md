@@ -44,7 +44,7 @@ python number_guessing_game.py
 6. Click "Play Again" to start a new game after winning
 
 ## Game Screenshot
-<img width="1000" height="787" alt="numberGuessingGame" src="https://github.com/user-attachments/assets/f79607ab-20d5-46c4-8bfb-4d021a046bfb" />
+<img width="1000" height="786" alt="numberGuessingGame" src="https://github.com/user-attachments/assets/3803231b-ea3c-4a9d-ae73-1f752830dcd6" />
 
 ## File Structure
 ```
