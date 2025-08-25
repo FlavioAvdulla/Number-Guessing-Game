@@ -44,13 +44,16 @@ python number_guessing_game.py
 6. Click "Play Again" to start a new game after winning
 
 ## Game Screenshot
-
+<img width="1000" height="787" alt="numberGuessingGame" src="https://github.com/user-attachments/assets/f79607ab-20d5-46c4-8bfb-4d021a046bfb" />
 
 ## File Structure
-text
+```
 number-guessing-game/
+
 ├── number_guessing_game.py  # Main game file
+
 └── README.md                # This file
+```
 
 ## Code Overview
 The game implements several classes:
