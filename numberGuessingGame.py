@@ -88,3 +88,6 @@ def draw_game():
     instruction2 = main_font.render("Can you guess what it is?", True, TEXT_COLOR)
     screen.blit(instruction2, (WIDTH//2 - instruction2.get_width()//2, 160))
     
+    # Draw input prompt
+    prompt = main_font.render("Enter your guess:", True, TEXT_COLOR)
+    screen.blit(prompt, (WIDTH//2 - prompt.get_width()//2, 220))
