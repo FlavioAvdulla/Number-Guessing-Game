@@ -85,3 +85,6 @@ def draw_game():
     instructions = main_font.render("I'm thinking of a number between 1 and 100", True, TEXT_COLOR)
     screen.blit(instructions, (WIDTH//2 - instructions.get_width()//2, 120))
     
+    instruction2 = main_font.render("Can you guess what it is?", True, TEXT_COLOR)
+    screen.blit(instruction2, (WIDTH//2 - instruction2.get_width()//2, 160))
+    
