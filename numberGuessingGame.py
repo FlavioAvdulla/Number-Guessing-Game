@@ -123,3 +123,68 @@ game_over = False
 input_box = InputBox(WIDTH//2 - 70, 260, 140, 50)
 submit_button = Button(WIDTH//2 - 80, 320, 160, 50, "Submit Guess")
 play_again_button = Button(WIDTH//2 - 100, 470, 200, 50, "Play Again")
+
+# Main game loop
+clock = pygame.time.Clock()
+running = True
+
+while running:
+    mouse_pos = pygame.mouse.get_pos()
+    
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        
+        # Handle input box events
+        guess = input_box.handle_event(event)
+        if guess is not None and not game_over:
+            guess = int(guess)
+            attempts += 1
+            
+            if guess < secret_number:
+                message = f"{guess} is too low! Try a higher number."
+            elif guess > secret_number:
+                message = f"{guess} is too high! Try a lower number."
+            else:
+                message = f"Congratulations! {guess} is correct!"
+                game_over = True
+            
+            # Clear input box after submission
+            input_box.text = ''
+        
+        # Handle button clicks
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            if submit_button.is_hover(mouse_pos) and not game_over and input_box.text:
+                guess = int(input_box.text)
+                attempts += 1
+                
+                if guess < secret_number:
+                    message = f"{guess} is too low! Try a higher number."
+                elif guess > secret_number:
+                    message = f"{guess} is too high! Try a lower number."
+                else:
+                    message = f"Congratulations! {guess} is correct!"
+                    game_over = True
+                
+                input_box.text = ''
+            
+            if game_over and play_again_button.is_hover(mouse_pos):
+                # Reset game
+                secret_number = generate_secret_number()
+                attempts = 0
+                message = ""
+                game_over = False
+    
+    # Update button hover effects
+    submit_button.is_hover(mouse_pos)
+    if game_over:
+        play_again_button.is_hover(mouse_pos)
+    
+    # Draw everything
+    draw_game()
+    
+    # Cap the frame rate
+    clock.tick(60)
+
+pygame.quit()
+sys.exit()
