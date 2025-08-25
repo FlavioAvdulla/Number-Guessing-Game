@@ -80,3 +80,8 @@ def draw_game():
     # Draw title
     title = title_font.render("Number Guessing Game", True, HIGHLIGHT)
     screen.blit(title, (WIDTH//2 - title.get_width()//2, 40))
+
+    # Draw instructions
+    instructions = main_font.render("I'm thinking of a number between 1 and 100", True, TEXT_COLOR)
+    screen.blit(instructions, (WIDTH//2 - instructions.get_width()//2, 120))
+    
