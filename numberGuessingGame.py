@@ -112,3 +112,9 @@ def draw_game():
         play_again_button.draw(screen)
     
     pygame.display.flip()
+
+# Game variables
+secret_number = generate_secret_number()
+attempts = 0
+message = ""
+game_over = False
