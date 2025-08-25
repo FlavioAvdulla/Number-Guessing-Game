@@ -106,3 +106,9 @@ def draw_game():
     # Draw attempts
     attempts_text = main_font.render(f"Attempts: {attempts}", True, TEXT_COLOR)
     screen.blit(attempts_text, (WIDTH//2 - attempts_text.get_width()//2, 400))
+
+    # Draw play again button if game is over
+    if game_over:
+        play_again_button.draw(screen)
+    
+    pygame.display.flip()
