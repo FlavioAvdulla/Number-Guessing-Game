@@ -76,3 +76,7 @@ def generate_secret_number():
 
 def draw_game():
     screen.fill(BACKGROUND)
+
+    # Draw title
+    title = title_font.render("Number Guessing Game", True, HIGHLIGHT)
+    screen.blit(title, (WIDTH//2 - title.get_width()//2, 40))
