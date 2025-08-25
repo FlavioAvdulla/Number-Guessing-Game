@@ -70,3 +70,6 @@ class InputBox:
         
         text_surface = main_font.render(self.text, True, TEXT_COLOR)
         surface.blit(text_surface, (self.rect.x + 10, self.rect.y + 10))
+
+def generate_secret_number():
+    return random.randint(1, 100)
